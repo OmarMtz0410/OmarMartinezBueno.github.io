@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 3</title>
+</head>
+<body>
+
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Shrek 1', 'Shrek 2', 'Shrek 3', 'Shrek 4', 'Gato con botas 1', 'Gato con botas 2'],
+            datasets: [{
+              label: 'Aceptación de las peliculas basadas en el mundo de "Shrek"',
+              backgroundColor: ["rgb(197,238,125)", "rgb(140,176,78)", "rgb(92,69,45)", "rgb(225,223,182)", "rgb(245,124,0)", "rgb(38,50,56)",],
+              data: [88, 89, 52, 54, 68, 94],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+
+</body>
+</html>
